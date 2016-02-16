@@ -35,3 +35,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'paperclip', '~> 4.3'
+gem 'aws-sdk-rails', '~> 1.0'
+gem 'aws-sdk-v1' 
