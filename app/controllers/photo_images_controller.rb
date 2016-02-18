@@ -4,8 +4,7 @@ class PhotoImagesController < ApplicationController
   # GET /photo_images
   def index
     @photo_images = PhotoImage.all
-
-    render json: @photo_images
+    render json: @photo_images, root: 'photo_image'
   end
 
   # GET /photo_images/1
