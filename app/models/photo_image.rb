@@ -5,6 +5,10 @@ class PhotoImage < ApplicationRecord
   validates_attachment_content_type :main, content_type: /\Aimage\/.*\Z/
 
   def s3_credentials
-    { bucket: "photo-image-collection", access_key_id: 'AKIAJAUQ5GCWDILB754Q', secret_access_key: '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' }
+    {
+      bucket: "photo-image-collection",
+      access_key_id: Rails.application.secrets.s3_access_key,
+      secret_access_key: Rails.application.secrets.s3_secret_key
+    }
   end
 end
